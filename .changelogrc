@@ -1,36 +1,62 @@
-## 14-10-2021
+## 28-10-2021
 
-`@chakra-ui/react@1.6.10`
+`@chakra-ui/react@1.6.11`
 
-**Radio** `v1.3.11`
+- fix: always use fromEntries polyfill from @chakra-ui/utils #4872
 
-- Add support for styling the container element based on the radio state
+**Gatsby Plugin** `v2.0.2`
 
-**Popover** `v1.8.5`
+- fix(gatsby-plugin): Update peerDependencies
 
-- Fix issue where `computePositionOnMount` didn't work without explict value
+Update `peerDependencies` to include Gatsby 4
 
-**Utils** `v1.8.3`
+**Styled System** `v1.13.0`
 
-- Fixed iframe bug on firefox when using `getRelatedTarget` function
-- Fix issue where pan-event utils don't work within iframe
+- Added \_groupFocusVisible style prop
 
-**Hooks** `v1.6.1`
+**Anatomy** `v1.1.0`
 
-- Forward `threshold` options from `usePanSession` to `PanSession` class
+- Made PopoverCloseButton themeable
 
-**Slider** `v1.4.1`
+**Popover** `v1.9.0`
 
-- Fix issue where value can't be changed when range-slider thumbs are stacked
+- Made PopoverCloseButton themeable
 
-**Modal** `v1.9.2`
+**Theme** `v1.11.0`
 
-- Fix issue where modal doesn't close when the escape key is pressed and `closeOnOverlayClick` is `false`
+- Made PopoverCloseButton themeable
 
-**Cli** `v1.5.3`
+**Slider** `v1.4.2`
 
-- Fixed an issue where the CLI tokens command exited unexpectedly with: `SyntaxError: Cannot use import statement outside a module`
+- Fix issue where sliding on a range slider without focusing sometimes fail.
 
-**Checkbox** `v1.5.8`
+**Hooks** `v1.6.2`
 
-- Fix issue where `tabIndex` property isn't passed to the underlying input element
+- used useCallbackRef for onOpenProp/onCloseProp in useDisclosure
+
+**System** `v1.7.5`
+
+- Fixed a bug in `useToken` where it wasn't possible to resolve some tokens which
+  contain dots like `useToken('space','1.5')`. (see #4834)
+
+**Menu** `v1.7.7`
+
+- Fixed an error where the onOpen was called multiple/infinite times
+- Fix issue where computePositionOnMount didn't work without explict value
+
+**Radio** `v1.3.12`
+
+- Fix issue where props are duplicated on child label and span elements
+- #4851 Removed aria-readonly from checkbox in favor of wcag 4.1.2
+
+**Theme Tools** `v1.2.3`
+
+- fix: always use fromEntries polyfill from @chakra-ui/utils #4872
+
+**Utils** `v1.8.4`
+
+- fix: always use fromEntries polyfill from @chakra-ui/utils #4872
+
+**Color Mode** `v1.1.14`
+
+- Use @chakra-ui/react-env to determine the correct body
